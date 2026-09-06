@@ -5,9 +5,9 @@
                 <img src="/smile.jpg" alt="" class="w-10 sm:w-14 lg:w-16 h-auto absolute opacity-50 left-2 sm:left-5 bottom-2 sm:bottom-5 rounded-xl">
                 <img class="h-32 sm:h-48 lg:h-56 w-auto lg:w-auto" :src="product?.images" alt="">
             </div>
-                <img class="mb-5 w-full" src="/strahovka.png" alt="">
+                <img class="mb-5 w-full hidden md:block" src="/strahovka.png" alt="">
                 <img class="w-full" src="/strahovka.png" alt="">
-        </div>
+            </div>
 </template>
 
 <script>

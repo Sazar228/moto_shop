@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center m-auto w-[90%] lg:w-4/5 mt-6 lg:mt-10 mb-6 lg:mb-10 pointer-events-none">
+    <div class="hidden lg:flex flex-col items-center m-auto w-[90%] lg:w-4/5 mt-6 lg:mt-10 mb-6 lg:mb-10 pointer-events-none">
     <h1 class="self-start font-bold text-lg lg:text-xl">Популярные производители</h1>
     <div class="flex flex-wrap lg:flex-nowrap gap-4 sm:gap-6 lg:gap-10 justify-center w-full mt-5">
       <div class="flex flex-col gap-3">
