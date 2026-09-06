@@ -1,38 +1,45 @@
-# ./
+# Shiny Migom
 
-This template should help get you started developing with Vue 3 in Vite.
+Интернет-магазин шин и дисков — пет-проект для портфолио с подбором шин по типоразмеру и по авто, каталогом, избранным и корзиной.
 
-## Recommended IDE Setup
+## О проекте
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Многостраничное приложение на Vue 3 с каталогом шин, дисков, мотошин и грузовых шин, фильтрацией по параметрам (ширина, высота, диаметр, производитель, сезон, Run Flat), карточками товаров с отзывами и адаптивной вёрсткой под десктоп и мобильные устройства.
 
-## Recommended Browser Setup
+## Функционал
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+* Каталог популярных шин, автошин, дисков и производителей на главной странице
+* Подбор шин по типоразмеру и подбор по авто
+* Фильтрация по ширине, высоте, диаметру, производителю, сезону, Run Flat и другим параметрам
+* Отдельные разделы: шины, диски, мотошины, грузовые шины
+* Карточка товара с фото, характеристиками, отзывами и похожими моделями
+* Избранное
+* Корзина с добавлением/удалением товаров и подсчётом итоговой цены
+* Сохранение корзины и избранного в localStorage (данные не пропадают при перезагрузке страницы)
+* Оформление заказа
+* Адаптивная мобильная версия с отдельным меню и переключением "Шины / Диски"
+* Переиспользуемые компоненты (шапка для десктопа и мобильной версии, карточки товаров, селекты фильтров)
 
-## Customize configuration
+## Архитектура
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* Composition API с переиспользуемыми хуками (`hooks`) для получения данных, избранного, заказа, сортировки и подсчёта итоговой цены
+* Pinia для управления состоянием приложения (корзина, избранное)
+* Модульная структура компонентов: отдельные компоненты для шапки (десктоп/мобайл), карточек корзины, блоков информации о товаре, рейтингов и отзывов
+* Асинхронные запросы (async/await) через Axios к mock API (Mokky)
+* Адаптивная вёрстка на Tailwind CSS под разные брейкпоинты (мобильные, планшеты, десктоп)
 
-## Project Setup
+## Стек
 
-```sh
-npm install
-```
+* Vue 3 (Composition API)
+* Vue Router
+* Pinia
+* Tailwind CSS
+* Axios
+* Mokky (mock backend / JSON API)
+* LocalStorage (сохранение состояния корзины и избранного)
+* V Auto Animate (анимации появления/удаления элементов)
+* JavaScript, HTML5, CSS3
 
-### Compile and Hot-Reload for Development
+## Демо
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Посмотреть проект: https://motoshop-two.vercel.app/
