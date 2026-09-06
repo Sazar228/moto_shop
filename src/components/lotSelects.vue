@@ -1,7 +1,6 @@
 <template>
   <div class="w-[90%] lg:w-4/5 flex flex-col lg:flex-row m-auto mt-10 h-auto lg:h-[320px] gap-4 lg:gap-10">
 
-    <!-- Переключатель вкладок — только мобильные/планшеты -->
     <div class="flex lg:hidden w-full rounded-lg overflow-hidden border">
       <button
         @click="activeFilter = 'tires'"
@@ -21,22 +20,16 @@
       </button>
     </div>
 
-    <!-- Блок фильтра шин -->
     <div
       class="filter-block w-full lg:w-2/4 colr flex-col rounded-b-lg"
       :class="{ 'mobile-hidden': activeFilter !== 'tires' }"
     >
       <div class="hidden lg:flex">
-        <!--top part (только десктоп)-->
-        <div
-          class="rounded-tl-lg font-bold flex w-3/5 bg-yellow-300 h-12 items-center justify-center gap-2"
-        >
+        <div class="rounded-tl-lg font-bold flex w-3/5 bg-yellow-300 h-12 items-center justify-center gap-2">
           <img class="pointer-events-none" src="/headerImg/car-wheel_1.svg" alt="" />
           <p>Подбор шин по типоразмеру</p>
         </div>
-        <div
-          class="w-2/5 border rounded-tr-lg flex justify-center items-center text-slate-400"
-        >
+        <div class="w-2/5 border rounded-tr-lg flex justify-center items-center text-slate-400">
           По авто
         </div>
       </div>
@@ -120,7 +113,7 @@
           По авто
         </div>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 mr-auto ml-auto mt-5 px-3 lg:px-0">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 lg:gap-x-6 lg:gap-y-5 mr-auto ml-auto mt-5 px-3 lg:px-6">
 
         <select class="all_mini" v-model="secondFilter.manufacturer">
           <option value="">Производитель</option>
@@ -243,6 +236,13 @@ select {
   border: solid 1px #eae9e9;
   border-radius: 10px;
   outline: none;
+}
+
+@media (min-width: 1024px) {
+  select {
+    max-width: 13rem;
+    padding: 12px 14px;
+  }
 }
 .colr {
   background-color: #f8f8f8;
